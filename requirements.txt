@@ -1,0 +1,32 @@
+Write a Dating recommendation app given the following details: 
+ 
+Name 
+Gender 
+Age 
+Interests 
+ 
+Preference should be given in the following order: 
+Gender -> Opposite gender to be give the preference 
+Age -> closest match 
+Interests -> Closest match of the list of interests/hobbies  
+ 
+For e.g.  
+ 
+Input: (Name-Age-Gender-Interests) 
+UserA-25-Female-Cricket,Tennis 
+UserB-27-Male-Cricket,Football,Movies 
+UserC-26-Male-C=Movies,Tennis,Football,Cricket 
+UserD-24-Female-C=Tennis,Football,Badminton 
+UserE-32-Female-C=Cricket,Football,Movies,Badminton 
+ 
+If I ask to fetch top 2 matches for User B, the order should be as follows: 
+UserA  
+UserD 
+ 
+Explanation:  
+
+Though UserE & UserB has maximum number of interests matching, age is given preference over interests.  
+
+Similarly though UserB & UserC are closest in terms of age & also all the interests being matched, gender is given preference over age & interests. 
+
+UserA is closest in terms of age when compared to UserD as the interests count match hence UserA is given more preference. 
